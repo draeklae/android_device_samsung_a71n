@@ -9,6 +9,9 @@ DEVICE_PATH := device/samsung/a71n
 # Assert
 TARGET_OTA_ASSERT_DEVICE := a71n
 
+# HIDL
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := sm7150_sec_defconfig
 #TARGET_KERNEL_VARIANT_CONFIG := vendor/variant_x1q_chn_openx_defconfig
@@ -22,3 +25,10 @@ TARGET_SCREEN_DENSITY := 420
 
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+
+# SELinux
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+#    $(DEVICE_PATH)/sepolicy/private
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
