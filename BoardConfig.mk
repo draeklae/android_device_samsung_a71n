@@ -9,6 +9,9 @@ DEVICE_PATH := device/samsung/a71n
 # Assert
 TARGET_OTA_ASSERT_DEVICE := a71n
 
+# FOD
+TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.a70q
+
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 
